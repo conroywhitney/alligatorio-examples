@@ -10,12 +10,16 @@ const Header = glamorous.header({
   width: "850px"
 });
 
-const Title = glamorous.h1({
-  ...baseStyles.h1,
-  color: colors.green,
-  fontFamily: fonts.sansSerif,
-  fontStyle: "italic"
-});
+const Title = glamorous.h1(
+  {
+    ...baseStyles.h1,
+    fontFamily: fonts.sansSerif,
+    fontStyle: "italic"
+  },
+  ({ dark = false }) => ({
+    color: dark ? colors.white : colors.green
+  })
+);
 
 const BorderedBox = glamorous.span({
   ...baseStyles.borderedBox,
