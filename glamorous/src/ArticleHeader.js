@@ -16,8 +16,8 @@ const Title = glamorous.h1(
     fontFamily: fonts.sansSerif,
     fontStyle: "italic"
   },
-  ({ dark = false }) => ({
-    color: dark ? colors.white : colors.green
+  ({ lightBackground = false }) => ({
+    color: lightBackground ? colors.green : colors.white
   })
 );
 
@@ -36,7 +36,9 @@ class ArticleHeader extends Component {
   render() {
     return (
       <Header>
-        <Title>Creating Styled React Components with Glamorous</Title>
+        <Title lightBackground>
+          Creating Styled React Components with Glamorous
+        </Title>
         <BorderedBox>
           <AuthorLink href="https://alligator.io/author/conroy-whitney">
             Conroy Whitney
